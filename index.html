@@ -251,7 +251,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="" method="post" role="form" class="contactForm" onsubmit="sendEmail() ; reset(); return false;">
               <div class="row">
 
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
@@ -328,9 +328,23 @@
   <script src="lib/magnific-popup/magnific-popup.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
 
-  <script src="contactform/contactform.js"></script>
 
   <script src="js/main.js"></script>
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "mchaouachi713@gmail.com",
+          Password: "D15C524FDC",
+          To: "mchaouachi713@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "This is the subject",
+          Body: "And this is the body",
+        }).then((message) => alert(message));
+      }
+    </script>
 
 </body>
 
