@@ -327,25 +327,17 @@
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/magnific-popup/magnific-popup.min.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="contactform/script.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("iwfgoarpfujDidmk4");
+   })();
+  </script>  
 
 
-  <script src="js/main.js"></script>
-     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script type="text/javascript">
-      function sendEmail() {
-        Email.send({
-          Host : "smtp.elasticemail.com",
-          Username : "mchaouachi713@gmail.com",
-          Password : "D15C524FDC",
-          To : 'mchaouachi713@gmail.com',
-          From : document.getElementById("email").value,
-          Subject : "This is the subject",
-          Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-      }
-    </script>
+
+ 
 
 </body>
 
